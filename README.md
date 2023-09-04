@@ -1,2 +1,85 @@
-# fashion-magazines
+# Fashion Magazines
 Code Louisville Data Analysis Exercise
+
+
+## Overview
+
+In this exercise we will write a SQL query against a database of magazine 
+subscriptions. This exercisee is based on the Codecademy "Multiple Tables" 
+lesson.
+
+### Schema
+![database schema](img/schema.png)
+
+### Table: customers
+| column | type | constraint |
+| ------ | ---- | ---------- |
+| customer_id | INTEGER | PRIMARY KEY |
+| customer_name | TEXT | NOT NULL |
+| address | TEXT | NOT NULL |
+
+
+### Table: subscriptions
+| column | type | constraint |
+| ------ | ---- | ---------- |
+| subscription_id | INTEGER | PRIMARY KEY |
+| description | TEXT | NOT NULL |
+| price_per_month | INTEGER | NOT NULL |
+| subscription_length | INTEGER | NOT NULL |
+
+### Table: orders
+| column | type | constraint |
+| ------ | ---- | ---------- |
+| order_id | INTEGER | PRIMARY KEY |
+| customer_id | INTEGER | FOREIGN KEY |
+| subscription_id | INTEGER | FOREIGN KEY |
+| purchase_date | TEXT | NOT NULL |
+| order_status | TEXT | NOT NULL |
+
+### Requirements
+
+Write a SQL query that returns the customer name and total amount due for the 
+customers that have unpaid Fashion Magazine subscriptions. Note that the column 
+names in the resulting file need to match the column names in the example below.
+
+Hints
+- You will need to join the customers, subscriptions, and orders tables
+- You will need to multiply the subscirption price with the subscription length
+to get the total amount due
+- You will need to sum the amount due to account for customers that have more 
+than one unpaid Fashion Magazine subscriptions
+### Example Output
+
+| Customer | Amount Due |
+| -------- | ---------- |
+| Bethann Schraub | 102 |
+| Eryn Vilar | 102 |
+| Janay Priolo | 57 |
+| Lizabeth Letsche | 237 |
+
+
+## Insructions
+
+1. Clone the repo to your machine.
+1. Create a virtual environment and install the packages listed in the `requirements.txt` file.
+1. Add your SQL query to the `sql/fashion_magazines.sql` file.
+1. Run the `run_sql.py` script.
+1. Add, Commit, and Push your `sql/fashion_magazines.sql` and `data/fashion_magazines.csv` files back to GitHub.
+
+###  Virutal Environment Instructions
+
+1. After you have cloned the repo to your machine, navigate to the project folder in GitBash/Terminal.
+1. Create a virtual environment in the project folder. `python3 -m venv venv` [^1]
+1. Activate the virtual environment. `source venv/bin/activate`
+1. Install the required packages. `pip install -r requirements.txt`
+1. When you are done working on your repo, deactivate the virtual environment. `deactivate`
+
+[^1]: GitBash on Windows uses “python” instead of “python3”
+
+### Automated Testing
+
+This repo contains a small testing program that is automatically run by GitHub to validate your code. This testing program is contained in the tests.py file. You don't have to do anything with this file to complete the exercise, but you can follow these steps if you would like to run the tests on your machine.
+
+1. Open GitBash in Windows or the Terminal in Mac and navigate to the project folder.
+1. Use the following command to run the tests: `pytest tests.py`. 
+1. Review the output from running the test. This will let you know whether your code produces the expected results.
