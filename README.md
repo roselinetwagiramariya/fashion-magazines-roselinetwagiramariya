@@ -43,7 +43,7 @@ customers that have unpaid Fashion Magazine subscriptions. Note that the column
 names in the resulting file need to match the column names in the example below.
 
 Hints
-- Building the query piece by piece 
+- Build the query piece by piece 
 - Start with the orders table and work out from there.
 - Filter the orders table on the `orders.order_status` column
 - Join the customers table to the orders table to get the customer's name
