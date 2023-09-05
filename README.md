@@ -74,7 +74,7 @@ more than one unpaid Fashion Magazine subscriptions
 1. Add, Commit, and Push your `sql/fashion_magazines.sql` and 
 `data/fashion_magazines.csv` files back to GitHub.
 
-###  Virutal Environment Instructions [^1]
+###  Virutal Environment Instructions
 
 1. After you have cloned the repo to your machine, navigate to the project 
 folder in GitBash/Terminal.
