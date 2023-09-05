@@ -43,11 +43,13 @@ customers that have unpaid Fashion Magazine subscriptions. Note that the column
 names in the resulting file need to match the column names in the example below.
 
 Hints
-- Start building the query piece by piece - starting with the orders table and
-working out from there.
+- Building the query piece by piece 
+- Start with the orders table and work out from there.
+- Filter the orders table on the `orders.order_status` column
 - Join the customers table to the orders table to get the customer's name
 - Join the subscriptions table to the orders table as to get the number of 
 months and subscription length
+- filter the orders on the `subscriptions.description` column
 - Multiply the subscirption price with the subscription length to get the total 
 amount due
 - Format the total amount due as currency using the `PRINTF()` function
