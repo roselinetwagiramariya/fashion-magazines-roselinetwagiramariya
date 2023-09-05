@@ -67,8 +67,8 @@ more than one unpaid Fashion Magazine subscriptions
 ## Insructions
 
 1. Clone the repo to your machine.
-1. Create a virtual environment and install the packages listed in the 
-`requirements.txt` file.
+1. Create and activate a virtual environment and install the packages listed in the 
+`requirements.txt` file. (instructions below)
 1. Add your SQL query to the `sql/fashion_magazines.sql` file.
 1. Run the `run_sql.py` script.
 1. Add, Commit, and Push your `sql/fashion_magazines.sql` and 
