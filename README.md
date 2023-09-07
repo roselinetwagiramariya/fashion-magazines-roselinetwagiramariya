@@ -72,7 +72,10 @@ more than one unpaid Fashion Magazine subscriptions
 1. Create and activate a virtual environment and install the packages listed in the 
 `requirements.txt` file. (instructions below)
 1. Add your SQL query to the `sql/fashion_magazines.sql` file.
-1. Run the `run_sql.py` script.
+1. Run the `run_sql.py` script. This script will execute your query against the
+database and save the results to `data/fashion_magazines.csv`.
+1. Test your code by running the automated tests `pytest tests.py`. 
+(instructions below)
 1. Add, Commit, and Push your `sql/fashion_magazines.sql` and 
 `data/fashion_magazines.csv` files back to GitHub.
 
@@ -105,4 +108,5 @@ can follow these steps if you would like to run the tests on your machine.
 folder.
 1. Use the following command to run the tests: `pytest tests.py`. 
 1. Review the output from running the test. This will let you know whether your 
-code produces the expected results.
+code produces the expected results. You can 
+[read about the pytest output here](https://docs.pytest.org/en/7.1.x/how-to/output.html).
