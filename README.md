@@ -106,6 +106,7 @@ can follow these steps if you would like to run the tests on your machine.
 
 1. Open GitBash in Windows or the Terminal in Mac and navigate to the project 
 folder.
+1. Make sure that the virtual environment is active.
 1. Use the following command to run the tests: `pytest tests.py`. 
 1. Review the output from running the test. This will let you know whether your 
 code produces the expected results. You can 
