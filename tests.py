@@ -17,10 +17,10 @@ def test_columns_exist():
         assert False, e
 
 @pytest.mark.parametrize("expected_customer,expected_amount",
-                        [["Bethann Schraub",102],
-                        ["Eryn Vilar",102],
-                        ["Janay Priolo",57],
-                        ["Lizabeth Letsche",237]])
+                        [["Bethann Schraub","$102.00"],
+                        ["Eryn Vilar","$102.00"],
+                        ["Janay Priolo","$57.00"],
+                        ["Lizabeth Letsche","$237.00"]])
 def test_values_exist(expected_customer, expected_amount):
     try:
         df = pd.read_csv(CSV_FILE)
